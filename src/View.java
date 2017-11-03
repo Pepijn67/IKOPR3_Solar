@@ -23,7 +23,7 @@ public class View extends SubScene{
     public View() {
         super (new Group(), 1080, 920, true, SceneAntialiasing.BALANCED);
         createShapes();
-        ((Group)this.getRoot()).getChildren().addAll(stackPane);
+        ((Group)this.getRoot()).getChildren().addAll(sun, stackPane);
     }
 
     private void createShapes() {
@@ -55,7 +55,7 @@ public class View extends SubScene{
         moonPane.getChildren().add(moon);
 
         stackPane = new StackPane();
-        stackPane.getChildren().addAll(sun, earth, moonPane);
+        stackPane.getChildren().addAll(earth, moonPane);
 
 
 
